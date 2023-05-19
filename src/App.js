@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Sub from './component/Sub/Sub';
 import Add from './component/Add/Add';
+import Mul from './component/Mul/Mul';
 import { useState } from 'react';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <h1>table 1</h1>
       <Add a={inputvalue} b="3"></Add>
       <Sub a={inputvalue} b="1"/>
+      <Mul a={inputvalue} b="2" />
    <table>
     <tr>
       <th>id</th>
