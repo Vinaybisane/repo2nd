@@ -26,7 +26,7 @@ function App() {
       
       <h1>table 1</h1>
       <Add a={inputvalue} b="3"></Add>
-      <Sub a={inputvalue} b="1" />
+      <Sub a={inputvalue} b="1"/>
    <table>
     <tr>
       <th>id</th>
