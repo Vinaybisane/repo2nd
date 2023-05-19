@@ -2,25 +2,31 @@ import logo from './logo.svg';
 import './App.css';
 import Sub from './component/Sub/Sub';
 import Add from './component/Add/Add';
+import { useState } from 'react';
 
 function App() {
+  const[inputvalue,setinputvalue]=useState(0)
+  const printvalue=()=>{
+    console.log("inputvalue:",inputvalue)
+  }
   return (
    
     <div>
       <div>
-        <input value={'2'} 
+        <input value={inputvalue} 
         onChange={(e)=>{
-          console.log('event',e.target.value)
+          setinputvalue(e.target.value)
+          //console.log('event',e)
         }}
         type='number' 
         placeholder='enter the number' />
       </div>
       <h2>Vinay bisane </h2>
-      <h2> 4th commit</h2>
+      <h2> 4th commit{inputvalue}</h2>
       
       <h1>table 1</h1>
-      <Add></Add>
-      <Sub />
+      <Add a={inputvalue} b="3"></Add>
+      <Sub a={inputvalue} b="1" />
    <table>
     <tr>
       <th>id</th>
